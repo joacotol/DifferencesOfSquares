@@ -22,7 +22,7 @@ class DifferenceOfSquaresCalculator {
 
     // Creates a  class that will compute the sum of squares
     // e.g. 1^2 + 2^2 + ... + 10^2 = 385
-    static int computeSumOfSquaresTo(int input) {
+    int computeSumOfSquaresTo(int input) {
         
         // Total sum
         int sum = 0;
@@ -43,9 +43,13 @@ class DifferenceOfSquaresCalculator {
 
     }
 
-    // LAST METHOD TO IMPLEMENT(TOMORROW!!!)
+    // This calculates the difference of squares using the methods from above
     int computeDifferenceOfSquares(int input) {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        int difference = 0;
+        int squareOfSum = computeSquareOfSumTo(input);
+        int sumOfSquare = computeSumOfSquaresTo(input);
+        difference = squareOfSum - sumOfSquare;
+        return difference;
     }
 
     /* JUST FOR TESTING */
@@ -53,8 +57,8 @@ class DifferenceOfSquaresCalculator {
         //int user = computeSquareOfSumTo(5);
         //System.out.println(user);
 
-        int user = computeSumOfSquaresTo(5);
-        System.out.println(user);
+        //int user = computeSumOfSquaresTo(5);
+        //System.out.println(user);
     }
     
 
